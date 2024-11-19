@@ -1,0 +1,219 @@
+/* General */
+
+/* utilicé el :root para declarar los colores y que se viera un poco más ordenado */
+:root {
+  --color-magenta: #ff3ba7;
+  --color-amarillo: #fcf6bd;
+  --color-lila: #e6d0ff;
+  --color-negro: #333;
+  --color-gris: #666;
+  --color-blanco: #fff;
+}
+
+html {
+  font-family: "Averia Sans Libre", sans-serif;
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Encabezado */
+header {
+  background-color: var(--color-lila);
+  background: url("../imgs/background_dulcemania.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+}
+
+.header-content {
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 95px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-magenta);
+  margin: 5px 0 15px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-negro);
+  margin: 5px 0 15px;
+}
+
+/* Barra de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 20px;
+}
+
+nav a {
+  color: var(--color-negro);
+  font-size: 17px;
+}
+
+/* utilicé el pseudocódigo :hover para hacer de la barra de nav más interactiva*/
+nav a:hover {
+  color: var(--color-magenta);
+  cursor: pointer;
+}
+
+/* Productos */
+#productos {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-amarillo);
+}
+
+#productos h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 20px;
+  color: var(--color-magenta);
+}
+
+/* Estilo de cada producto */
+.producto {
+  display: inline-block; /* incluí esto para crear los contenedores */
+  width: 250px;
+  margin: 15px;
+  padding: 15px;
+  background-color: var(--color-blanco);
+  border-radius: 8px;
+  box-shadow: 11px 10px 5px 0px rgba(0, 0, 0, 0.28);
+  text-align: center;
+}
+
+.producto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.producto h3 {
+  font-size: 15px;
+  margin: 10px 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.producto p {
+  font-size: 10px;
+}
+
+.producto button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: var(--color-magenta);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Acerca de nosotros y contáctanos */
+
+/* utilicé flex para no tener que crear una tabla en HTML y ordenar esta sección de forma horizontal y combiné 
+id y class para que cuando se hiciera click a los elementos de la barra de nav nos llegara a las secciones 
+correspondientes */
+
+#acerca-de {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: var(--color-lila);
+}
+
+.info_tienda,
+#contactanos {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+}
+
+.info_tienda h2,
+#contactanos h2 {
+  font-size: 35px;
+  color: var(--color-magenta);
+}
+
+.info_tienda p,
+#contactanos p {
+  margin-top: 9px;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.nom_ap,
+.mail,
+.mensaje {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* incluí un formulario con HTML de contacto con su botón */
+#contactanos textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#nombre_form,
+#mail_form {
+  height: 35px;
+}
+
+#contactanos button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: var(--color-magenta);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imagen_tienda {
+  width: 275px;
+  border-radius: 8px;
+  margin: 15px;
+}
+
+/* Pie de página */
+footer {
+  background-color: var(--color-gris);
+  color: var(--color-magenta);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 11px;
+}
+
+.foot {
+  width: 16px;
+  height: auto;
+}
+
+/* otro flex para ordenar los íconos de forma horizontal */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
